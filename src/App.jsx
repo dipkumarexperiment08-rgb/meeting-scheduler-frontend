@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard'
 import CalendarPage from './pages/CalendarPage'
 import NewMeeting from './pages/NewMeeting'
 import MeetingDetail from './pages/MeetingDetail'
+import EditMeeting from './pages/EditMeeting'
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
         } />
         <Route path="/meetings/:id" element={
           <ProtectedRoute><MeetingDetail /></ProtectedRoute>
+        } />
+        <Route path="/meetings/:id/edit" element={
+          <ProtectedRoute><EditMeeting /></ProtectedRoute>
         } />
       </Routes>
     </BrowserRouter>
